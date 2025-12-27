@@ -26,9 +26,9 @@ refined (views)
 core (views)
   ↓
 marts (tables)
-
+```
 ## Layer Definitions
-### Raw
+### Raw Layer
 **Purpose:** Source-of-truth ingestion  
 **Format:** Tables  
 
@@ -39,8 +39,10 @@ marts (tables)
 - Includes metadata such as load timestamps and source identifiers
 
 **Example:**
+```raw.sales.orders```
 
-### Staging
+
+### Staging Layer
 **Purpose:** Structural normalization  
 **Format:** Views  
 
@@ -53,8 +55,9 @@ marts (tables)
 This layer exists to decouple downstream logic from source-system naming conventions and schema volatility.
 
 **Example:**
+```staging.sales.stg_orders```
 
-### Refined
+### Refined Layer
 **Purpose:** Source-specific business shaping  
 **Format:** Views  
 
@@ -69,8 +72,9 @@ Common examples include:
 - Flag and indicator derivations
 
 **Example:**
+```refined.sales.ref_orders```
 
-### Core
+### Core Layer
 **Purpose:** Conformed, integrated business entities  
 **Format:** Views  
 
@@ -82,8 +86,9 @@ Common examples include:
 This layer represents the canonical analytical model used across the organization.
 
 **Example:**
+```core.sales.fact_sales```
 
-### Marts
+### Marts Layer
 **Purpose:** Analytics-serving layer  
 **Format:** Tables (materialized)  
 
@@ -93,9 +98,12 @@ This layer represents the canonical analytical model used across the organizatio
 - Balances data freshness with query performance
 
 **Example:**
+```marts.sales.mart_sales```
 
 ## View-Based Transformation Strategy
-Layers 2–4 are implemented as views. Each materialization run for the marts layer always reflects the most
+Marts are materialized via scheduled queries or stored procedures executed downstream of the logical layers.
+
+Layers 1–3 are implemented as views. Each materialization run for the marts layer always reflects the most
 current upstream data available at execution time.
 
 Benefits of this approach include:
@@ -116,3 +124,12 @@ source systems (e.g., multiple CRMs or ERPs) without altering downstream consump
 - Business definitions are enforced centrally and reused downstream
 - Layers are additive and composable
 - Performance optimization occurs at the serving layer, not the transformation layers
+
+
+## Production Implementation Note
+In production environments, layers are commonly implemented using
+execution-ordered schemas (e.g. `00_raw`, `01_staging`, `02_refined`)
+and environment-specific database or pool naming conventions.
+
+This repository omits those details intentionally to focus on
+architectural patterns rather than platform-specific execution mechanics.
