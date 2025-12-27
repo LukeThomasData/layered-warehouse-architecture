@@ -33,7 +33,7 @@ This ensures layer responsibility is always visible in queries, lineage tools, a
 - Every fact-like dataset has an explicitly defined grain
 - Grain is documented at the model level (file-level comments)
 - Core layer models remain at the **lowest meaningful analytical grain**
-- Aggregations are only introduced in the marts layer
+- Consumption-focused aggregations are introduced in the marts layer
 
 This prevents accidental double-counting and inconsistent metric interpretation.
 
@@ -42,7 +42,7 @@ This prevents accidental double-counting and inconsistent metric interpretation.
 ## Metric Ownership & Definition
 
 - Business metrics are defined **once** and reused downstream
-- Metric logic lives in the refined or core layers
+- Metric logic lives in the refined layer and is integrated downstream for enterprise use.
 - Marts may aggregate metrics but do not redefine business meaning
 
 This design prevents metric drift across dashboards, reports, and teams.
