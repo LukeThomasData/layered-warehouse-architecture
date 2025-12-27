@@ -1,4 +1,4 @@
--- raw.sales.raw_sales_orders_brand_b
+-- Table Name: raw.sales.raw_sales_orders_brand_b
 -- Source-of-truth ingestion for Brand B sales orders
 -- No transformations applied
 
