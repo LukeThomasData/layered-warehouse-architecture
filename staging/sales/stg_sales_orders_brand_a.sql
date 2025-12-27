@@ -10,5 +10,5 @@ SELECT
     CAST(discount_amount AS NUMERIC) AS discount_amount,
     created_at,
     updated_at
-FROM raw.sales.orders_brand_a
+FROM raw.sales.raw_sales_orders_brand_a
 WHERE order_id IS NOT NULL;
