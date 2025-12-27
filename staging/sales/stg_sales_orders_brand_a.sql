@@ -1,5 +1,5 @@
--- staging.sales.stg_orders
--- Structural normalization only
+-- staging.sales.stg_orders_brand_a
+-- Structural normalization for Brand A sales orders
 
 SELECT
     order_id,
@@ -10,5 +10,5 @@ SELECT
     CAST(discount_amount AS NUMERIC) AS discount_amount,
     created_at,
     updated_at
-FROM raw.sales.orders
+FROM raw.sales.orders_brand_a
 WHERE order_id IS NOT NULL;
