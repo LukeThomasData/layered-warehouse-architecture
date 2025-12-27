@@ -1,4 +1,5 @@
--- core.sales.fact_sales
+-- View Name: core.sales.fact_sales
+-- Grain: One row per order per brand
 -- Enterprise-wide canonical sales fact at order grain
 -- Integrates multiple brands into a single analytical contract
 
