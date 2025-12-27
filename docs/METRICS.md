@@ -4,9 +4,8 @@ This document defines the core sales metrics exposed through the analytics wareh
 Metric definitions are **authoritative** and are intended to be reused consistently across
 dashboards, reports, and downstream analytics.
 
-Metrics are defined in the refined layer and integrated downstream for enterprise use.
-The marts layer materializes the resulting canonical datasets to support performant,
-consistent consumption across analytics tools.
+Metrics are defined in the refined layer, integrated into canonical analytical models downstream,
+and materialized in the marts layer to support performant, consistent consumption across analytics tools.
 
 ---
 
