@@ -2,6 +2,7 @@
 -- Materialized serving table for analytics
 
 SELECT
+    brand_key,
     order_date,
     COUNT(DISTINCT order_id) AS order_count,
     SUM(gross_amount)        AS gross_revenue,
