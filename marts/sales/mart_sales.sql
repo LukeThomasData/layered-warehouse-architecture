@@ -1,4 +1,5 @@
--- marts.sales.mart_sales
+-- Table Name: marts.sales.mart_sales
+-- Grain: One row per brand per day
 -- Materialized serving table for analytics
 
 SELECT
