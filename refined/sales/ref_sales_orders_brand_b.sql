@@ -1,4 +1,5 @@
--- refined.sales.ref_orders_brand_b
+-- View Name: refined.sales.ref_orders_brand_b
+-- Grain: One row per order
 -- Canonical sales definition for Brand B
 -- Reconciles Brand B sales data across operational systems
 -- and applies brand-specific business logic
