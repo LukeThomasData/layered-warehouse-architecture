@@ -1,0 +1,12 @@
+-- marts.sales.mart_sales
+-- Materialized serving table for analytics
+
+SELECT
+    order_date,
+    COUNT(DISTINCT order_id) AS order_count,
+    SUM(gross_amount)        AS gross_revenue,
+    SUM(net_revenue)         AS net_revenue,
+    AVG(net_revenue)         AS average_order_value
+FROM core.sales.fact_sales
+WHERE is_completed = 1
+GROUP BY order_date;
