@@ -1,6 +1,7 @@
 -- refined.sales.ref_orders_brand_b
 -- Canonical sales definition for Brand B
--- Brand-specific source systems reconciled upstream
+-- Reconciles Brand B sales data across operational systems
+-- and applies brand-specific business logic
 
 SELECT
     order_id,
