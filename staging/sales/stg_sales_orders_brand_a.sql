@@ -1,4 +1,4 @@
--- staging.sales.stg_orders_brand_a
+-- View Name: staging.sales.stg_orders_brand_a
 -- Structural normalization for Brand A sales orders
 
 SELECT
