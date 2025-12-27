@@ -10,4 +10,4 @@ SELECT
     AVG(net_revenue)         AS average_order_value
 FROM core.sales.fact_sales
 WHERE is_completed = 1
-GROUP BY order_date;
+GROUP BY brand_key, order_date;
