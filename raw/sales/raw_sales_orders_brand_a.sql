@@ -1,5 +1,5 @@
--- raw.sales.orders
--- Source-of-truth ingestion from the sales system
+-- raw.sales.raw_sales_orders_brand_a
+-- Source-of-truth ingestion for Brand A sales orders
 -- No transformations applied
 
 SELECT
