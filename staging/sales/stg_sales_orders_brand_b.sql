@@ -1,7 +1,5 @@
--- refined.sales.ref_orders_brand_b
--- Canonical sales definition for Brand B
--- This model reconciles Brand B sales data across its operational source systems
--- (e.g., CRM, ERP) and applies brand-specific business logic.
+-- staging.sales.stg_orders_brand_b
+-- Structural normalization for Brand B sales orders
 
 SELECT
     order_id,
