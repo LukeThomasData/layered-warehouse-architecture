@@ -23,4 +23,4 @@ SELECT
         WHEN status IN ('completed', 'shipped') THEN 1
         ELSE 0
     END AS is_completed
-FROM staging.sales.stg_orders;
+FROM staging.sales.stg_orders_brand_a;
