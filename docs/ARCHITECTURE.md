@@ -29,7 +29,7 @@ refined (views)
 core (views)
   ↓
 marts (tables)
-
+```
 
 ## Layer Definitions
 
@@ -45,9 +45,8 @@ marts (tables)
 - Includes metadata such as load timestamps and source identifiers
 
 **Examples:**
-```sql
-raw.sales.raw_sales_orders_brand_a
-raw.sales.raw_sales_orders_brand_b
+- `raw.sales.raw_sales_orders_brand_a`
+- `raw.sales.raw_sales_orders_brand_b`
 
 ### Staging Layer
 
