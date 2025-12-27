@@ -1,5 +1,7 @@
--- refined.sales.ref_orders
--- Source-specific business logic and metric definitions
+-- refined.sales.ref_orders_brand_a
+-- Canonical sales definition for Brand A
+-- Reconciles Brand A sales data across operational systems
+-- and applies brand-specific business logic
 
 SELECT
     order_id,
