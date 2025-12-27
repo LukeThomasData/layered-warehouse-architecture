@@ -12,7 +12,7 @@ SELECT
     discount_amount,
     net_revenue,
     is_completed
-FROM refined.sales.ref_orders  -- existing Brand A
+FROM refined.sales.ref_orders_brand_a  -- existing Brand A
 
 UNION ALL
 
