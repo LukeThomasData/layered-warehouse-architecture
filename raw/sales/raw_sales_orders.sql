@@ -1,7 +1,6 @@
--- RAW LAYER
----- raw.sales.orders
----- Source-of-truth ingestion from the sales system
----- No transformations applied
+-- raw.sales.orders
+-- Source-of-truth ingestion from the sales system
+-- No transformations applied
 
 SELECT
     order_id,
